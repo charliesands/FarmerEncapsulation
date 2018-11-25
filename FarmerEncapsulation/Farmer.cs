@@ -9,7 +9,8 @@ namespace FarmerEncapsulation
     class Farmer
     {
         public int BagsOfFeed { get; private set; }
-        public const int FeedMultiplier = 30;
+        private int feedMultiplier;
+        public int FeedMultiplier { get { return feedMultiplier; } }
 
         private int numberOfCows;
         public int NumberOfCows
@@ -24,6 +25,11 @@ namespace FarmerEncapsulation
                 numberOfCows = value;
                 BagsOfFeed = numberOfCows * FeedMultiplier;
             }
+        }
+        public Farmer(int numberOfCows, int feedMultiplier)
+        {
+            this.feedMultiplier = feedMultiplier;
+            NumberOfCows = numberOfCows;
         }
     }
 }

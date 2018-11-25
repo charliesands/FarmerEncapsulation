@@ -16,7 +16,7 @@ namespace FarmerEncapsulation
         public Form1()
         {
             InitializeComponent();
-            farmer = new Farmer() { NumberOfCows = 15 };
+            farmer = new Farmer(15, 30);
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -27,12 +27,6 @@ namespace FarmerEncapsulation
         private void button1_Click(object sender, EventArgs e)
         {
             Console.WriteLine("I need {0} bags of feed for {1} cows", farmer.BagsOfFeed, farmer.NumberOfCows);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            farmer.BagsOfFeed = 5;
-        }
-        
+        }        
     }
 }
