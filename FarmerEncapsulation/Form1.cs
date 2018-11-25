@@ -28,6 +28,11 @@ namespace FarmerEncapsulation
         {
             Console.WriteLine("I need {0} bags of feed for {1} cows", farmer.BagsOfFeed, farmer.NumberOfCows);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            farmer.BagsOfFeed = 5;
+        }
         
     }
 }
